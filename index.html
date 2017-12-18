@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tab switch</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tabs{
+            margin: 100px;
+            width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+        }
+        .title>li{
+            width: 33%;
+            text-align: center;
+            padding: 10px;
+            border-left: 1px solid rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(255, 255, 255);
+            background-color: rgb(40, 150, 201);
+            color: white;
+        }
+        .title>li:first-child{
+            border-left: none;
+        }
+        .page{
+            height: 200px;
+            background-color: rgb(228, 238, 169);
+        }
+        .page>li{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 200px;
+            display: none;
+        }
+        .title .opt{
+            background-color: rgb(135, 187, 216);
+            color: black;
+        }
+        .page .opt{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <ul class="title">
+            <li class="opt">tab1</li>
+            <li>tab2</li>
+            <li>tab3</li>
+        </ul>
+        <ul class="page">
+            <li class="opt">content1</li>
+            <li>content2</li>
+            <li>content3</li>
+        </ul>
+    </div>
+    <div class="tabs two">
+        <ul class="title">
+            <li class="opt">tab1</li>
+            <li>tab2</li>
+            <li>tab3</li>
+        </ul>
+        <ul class="page">
+            <li class="opt">content1</li>
+            <li>content2</li>
+            <li>content3</li>
+        </ul>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
+<script src="tab.js"></script>
+</html>
